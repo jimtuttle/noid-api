@@ -16,8 +16,8 @@ RESTful API for creating and managing NOID (Nice Opaque Identifier), the persist
 
 | Method | URI | Action |
 |------- | --- | ------ |
-| GET | /noid/api/v1.0/identfifier | Retrieve list of identifiers
-| GET | /noid/api/v1.0/identfifier/[identifier] | Retrieve identifier metadata
+| GET | /noid/api/v1.0/identifier | Retrieve list of identifiers
+| GET | /noid/api/v1.0/identifier/[identifier] | Retrieve identifier metadata
 | POST | /noid/api/v1.0/identifier | Mint identifier
 | PUT | /noid/api/v1.0/identifier/[identifier] | Update identifier metadata
 | DELETE | /noid/api/v1.0/identifier/[identifier] | Delete identifier
