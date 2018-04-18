@@ -11,3 +11,17 @@ RESTful API for creating and managing NOID (Nice Opaque Identifier), the persist
 * Start a feature/bugfix branch
 * Commit and push until you are happy with your contribution
 * Make sure to add tests
+
+# Usage
+
+| Method | URI | Action |
+|------- | --- | ------ |
+| GET | /noid/api/v1.0/identfifier | Retrieve list of identifiers
+| GET | /noid/api/v1.0/identfifier/[identifier] | Retrieve identifier metadata
+| POST | /noid/api/v1.0/identifier | Mint identifier
+| PUT | /noid/api/v1.0/identifier/[identifier] | Update identifier metadata
+| DELETE | /noid/api/v1.0/identifier/[identifier] | Delete identifier
+| GET | /noid/api/v1.0/user/ | Retrieve list of user IDs
+| GET | /noid/api/v1.0/user/[userid] | Retrieve user profile
+| POST | /noid/api/v1.0/user/[userid] | Create user
+| DELETE | /noid/api/v1.0/identifier/[userid] | Delete user
