@@ -1,0 +1,40 @@
+CREATE USER IF NOT EXISTS 'noidadmin'@'localhost' IDENTIFIED BY 'kunze';
+CREATE DATABASE IF NOT EXISTS noid;
+USE noid;
+GRANT DELETE, INSERT, SELECT, UPDATE ON noid TO 'noidadmin'@'localhost';
+FLUSH PRIVILEGES;
+
+
+CREATE TABLE noid.User
+(user_id INT NOT NULL AUTO_INCREMENT,
+username VARCHAR(25) NOT NULL,
+email VARCHAR(25) NOT NULL,
+token VARCHAR(25) NOT NULL,
+PRIMARY KEY (user_id),
+UNIQUE (username, email)) ENGINE=InnoDB
+
+
+CREATE TABLE noid.Noid
+(identifier VARCHAR(20) NOT NULL,
+user INT NOT NULL,
+date_created DATETIME,
+date_modified DATETIME,
+agent VARCHAR(25),
+target VARCHAR(100),
+FOREIGN KEY fk_user(user)
+REFERENCES User(user_id)
+ON UPDATE CASCADE
+ON DELETE RESTRICT,
+PRIMARY KEY (identifier)) ENGINE=InnoDB
+
+
+
+CREATE TABLE noid.Org
+(org_id INT NOT NULL AUTO_INCREMENT,
+org_name VARCHAR(40) NOT NULL,
+admin INT NOT NULL,
+PRIMARY KEY (org_id),
+FOREIGN KEY fk_admin(admin)
+REFERENCES User(user_id)
+ON UPDATE CASCADE
+ON DELETE RESTRICT,
