@@ -1,6 +1,6 @@
 # noid-api
 
-RESTful API for creating and managing NOID (Nice Opaque Identifier), the persistent and opaque identifier scheme created by John Kunze, California Digital Library.  For more informaiton on NOID see the [UCOP documentation](https://confluence.ucop.edu/display/Curation/NOID).
+RESTful API for creating and managing NOID (Nice Opaque Identifier), the persistent and opaque identifier scheme created by John Kunze, California Digital Library.  For more information on NOID see the [UCOP documentation](https://confluence.ucop.edu/display/Curation/NOID).
 
 
 # Contributing to noid-api
