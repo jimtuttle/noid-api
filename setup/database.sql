@@ -1,7 +1,10 @@
-CREATE USER IF NOT EXISTS 'noidadmin'@'localhost' IDENTIFIED BY 'kunze';
+# Database configuration
+# Replace <NOID_DB_USER> and <NOID_DB_PASSWORD> with the values you set in set_variables.sh
+
+CREATE USER IF NOT EXISTS '<NOID_DB_USER>'@'localhost' IDENTIFIED BY '<NOID_DB_PASSWORD>';
 CREATE DATABASE IF NOT EXISTS noid;
 USE noid;
-GRANT DELETE, INSERT, SELECT, UPDATE ON noid TO 'noidadmin'@'localhost';
+GRANT DELETE, INSERT, SELECT, UPDATE ON noid TO '<NOID_DB_USER>'@'localhost';
 FLUSH PRIVILEGES;
 
 
